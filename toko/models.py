@@ -2,7 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Customer(models.Model):
-  user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+  # user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+  user = models.OneToOneField(User, verbose_name=('user'), on_delete=models.CASCADE)
   nama = models.CharField(max_length=200, null=True)
   email = models.CharField(max_length=200, null=True)
 
